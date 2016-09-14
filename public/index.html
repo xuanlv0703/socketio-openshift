@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  html, body {
+      height: 100%;
+  }
+  #left, #right {
+      width:50%;
+      height:100%;
+      float:left;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<p>Hello.</p>
+<!-- <script async src="//assets.codepen.io/assets/embed/ei.js"></script> -->
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script type="text/javascript">
+  var socket = io();//io("http://nodejs-jorgecardoso.rhcloud.com");
+  console.log(socket)
+  socket.on('data',function(res){
+    alert(res);
+    // socket.emit('news','got it.');
+    
+  })
+</script>
+
+</body>
+</html>
